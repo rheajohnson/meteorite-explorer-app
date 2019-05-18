@@ -16,7 +16,9 @@ const MeteoriteLandings = new GraphQLObjectType({
     recclass: { type: GraphQLString },
     mass: { type: GraphQLString },
     fall: { type: GraphQLString },
-    year: { type: GraphQLString }
+    year: { type: GraphQLString },
+    reclat: { type: GraphQLString },
+    reclong: { type: GraphQLString }
   })
 });
 
