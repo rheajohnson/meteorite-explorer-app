@@ -1,0 +1,19 @@
+{
+  "name": "meteorite-explorer-app",
+  "version": "1.0.0",
+  "description": "Application that provides users with the ability to explore meteorite strikes across the globe.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.0",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.3.0"
+  }
+}
