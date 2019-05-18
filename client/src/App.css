@@ -29,3 +29,13 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    padding-bottom: 12px;
+  }
+
+  .content-container {
+    padding: 16px 16px 8px 16px;
+  }
+}
