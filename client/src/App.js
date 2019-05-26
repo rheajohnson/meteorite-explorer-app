@@ -5,28 +5,30 @@ import Highlighter from "react-highlight-words";
 import Moment from "react-moment";
 import "./App.css";
 
+//importing compontents from antd
 const { Header, Footer, Content } = Layout;
 const { Title } = Typography;
 const Search = Input.Search;
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
       data: [],
       filteredDb: [],
       loading: false,
-      searchInput: "",
-      sortedInfo: null
+      searchInput: ""
     };
   }
 
+  //table columns
   columns = [
     {
       title: "Name",
       dataIndex: "name",
       key: "name",
       render: text => (
+        //name item will highlight if there is a match
         <Highlighter
           highlightStyle={{ backgroundColor: "#ffc069", padding: 0 }}
           searchWords={[this.state.searchInput]}
@@ -145,13 +147,13 @@ export default class App extends React.Component {
   };
 
   setInputValue = e => {
+    //searchInput is used when highlighting row, only if 2 or more characters match
     if (e.target.value.length < 2) {
       if (this.state.searchInput.length > 0) {
         this.setState({ searchInput: "" });
       }
       return;
     }
-
     const value = e.target.value;
     this.setState({ searchInput: value });
   };
@@ -196,3 +198,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;
